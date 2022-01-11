@@ -20,17 +20,17 @@ def _main():
 
 
     for i in range(1, int(agent_number) + 1):
-        account_info = ("agent@rec.foi.hr", "tajna")
+        account_info = ("", "")
         thread1 = threading.Thread(
             target=utility.create_student_agent(account_info, i), args=(account_info, i)
         ).start()
 
-    account_info = ("bzitkovic@rec.foi.hr", "agent48")
+    account_info = ("", "")
     thread2 = threading.Thread(
         target=utility.create_cordinator_agent(account_info), args=(account_info)
     ).start()
 
-    account_info = ("posiljatelj@rec.foi.hr", "tajna")
+    account_info = ("", "")
     thread3 = threading.Thread(
         target=utility.create_voting_agent(account_info), args=(account_info)
     ).start()
